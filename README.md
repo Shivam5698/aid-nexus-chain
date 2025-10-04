@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# Welcome to Nexus relief project
+Overview
+NexusRelief is a decentralized humanitarian aid platform that leverages AI, Web3 identity, and DeFi to deliver fast, transparent, and secure disaster relief. It empowers victims with portable digital identities, enables donors to track their contributions in real time, and integrates local vendors into the aid ecosystem.
 
-## Project info
+🚀 Project Highlights
+Track: Humanitarian Aid & Disaster Relief
 
-**URL**: https://lovable.dev/projects/3e59490b-4ece-4c62-91b7-e5cd42825781
+Tech Domains: AI for Everything, Blockchain & DeFi, Web3, Sustainability & Social Impact
 
-## How can I edit this code?
+Status: Idea Phase (Prototype in Development)
 
-There are several ways of editing your application.
+🔍 Problem Statement
+Traditional disaster relief is slow, opaque, and vulnerable to corruption. Victims often lack documentation, making it difficult to access aid. Donors have limited visibility into how their funds are used.
 
-**Use Lovable**
+💡 Our Solution
+NexusRelief solves these issues through:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3e59490b-4ece-4c62-91b7-e5cd42825781) and start prompting.
+AI-powered damage assessment using satellite and social media data.
 
-Changes made via Lovable will be committed automatically to this repo.
+Self-Sovereign Identity (SSI) creation via chatbot for undocumented victims.
 
-**Use your preferred IDE**
+Transparent smart contracts for donation tracking.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Direct-to-victim aid tokens redeemable with local vendors.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+🧪 Prototype Workflows
+Victim Onboarding: WhatsApp chatbot guides victims to create a biometric digital ID and receive aid tokens.
 
-Follow these steps:
+Donor Dashboard: Web dApp shows real-time impact, donation flow, and transaction logs.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Vendor Redemption: Local merchants scan victim QR codes to exchange tokens for goods and receive stablecoin payouts.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🧠 Key Features
+AI-driven needs triage
 
-# Step 3: Install the necessary dependencies.
-npm i
+SSI via mobile chatbot
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Auditable donation pool
 
-**Edit a file directly in GitHub**
+Aid tokens for direct relief
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Donor transparency dashboard
 
-**Use GitHub Codespaces**
+🎨 UI/UX Design
+Victims: Accessible chatbot via SMS/WhatsApp in native languages.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Donors: Clean web interface with impact visualizations.
 
-## What technologies are used for this project?
+Vendors: Simple mobile app for token redemption.
 
-This project is built with:
+🔐 Unique Selling Proposition
+NexusRelief offers end-to-end transparency, fraud-resistant identity, and direct financial aid—restoring trust and accelerating relief.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🛠️ Technology Stack
+Layer	Tools & Frameworks
+Frontend	React Native / Flutter
+Backend	Node.js, Python
+Blockchain	Solidity on Polygon/Arbitrum
+AI/ML	TensorFlow, PyTorch
+Database	IPFS, MongoDB
+Integrations	Twilio, Satellite APIs, Chainlink Oracles
+Dev Tools	GitHub, Figma, Docker, Hardhat
+📈 Roadmap
+MVP: Core platform with chatbot, donation contract, and vendor system.
 
-## How can I deploy this project?
+Integration: AI damage assessment + NGO field test.
 
-Simply open [Lovable](https://lovable.dev/projects/3e59490b-4ece-4c62-91b7-e5cd42825781) and click on Share -> Publish.
+Scale: Global vendor network + DeFi micro-insurance.
 
-## Can I connect a custom domain to my Lovable project?
+👥 Beneficiaries
+Disaster Victims: Fast aid + secure identity
 
-Yes, you can!
+Donors: Full transparency
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Aid Agencies: Efficient distribution
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Local Vendors: Economic inclusion
+
+⚠️ Challenges & Mitigations
+Connectivity Issues: SMS fallback + field support
+
+Vendor Verification: NGO partnerships for onboarding
+
+📊 Competitor Edge
+Unlike traditional NGOs and crypto donation platforms, NexusRelief delivers a full-stack solution—from identity to last-mile aid delivery.
