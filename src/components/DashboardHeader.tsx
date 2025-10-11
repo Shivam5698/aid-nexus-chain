@@ -1,10 +1,12 @@
-import { Wallet, Bell, Search, Users, Home, Heart, UserCheck, Store, Shield, Brain } from "lucide-react";
+import { Wallet, Bell, Search, Users, Home, Heart, UserCheck, Store, Shield, Brain, LogOut } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const navigationItems = [
-  { name: "Dashboard", path: "/", icon: Home },
+  { name: "Dashboard", path: "/dashboard", icon: Home },
   { name: "Donors", path: "/donors", icon: Heart },
   { name: "Victims", path: "/victims", icon: UserCheck },
   { name: "Vendors", path: "/vendors", icon: Store },
@@ -14,6 +16,25 @@ const navigationItems = [
 
 const DashboardHeader = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to log out. Please try again.",
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Logged out",
+        description: "You have been successfully logged out.",
+      });
+      navigate("/");
+    }
+  };
 
   return (
     <header className="gradient-rainbow">
@@ -42,6 +63,15 @@ const DashboardHeader = () => {
             </Button>
             <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
               <Wallet className="w-5 h-5" />
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="text-white hover:bg-white/20"
+              onClick={handleLogout}
+              title="Log out"
+            >
+              <LogOut className="w-5 h-5" />
             </Button>
             <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
               <span className="text-white font-semibold">DN</span>
